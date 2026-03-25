@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RPA WinThor 2130</title>
+    <style>
+        :root {
+            --primary: #004a99;
+            --secondary: #ff7300;
+            --bg: #f0f2f5;
+            --white: #ffffff;
+            --text: #2c3e50;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+        body { background-color: var(--bg); color: var(--text); line-height: 1.5; padding-bottom: 20px; }
+
+        /* Banner Principal - Responsivo com a nova imagem */
+        .hero-banner {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 4px solid var(--secondary);
+            /* A imagem image_4.png deve estar na mesma pasta */
+            content: url('banner-rpa.png'); 
+        }
+
+        .container { padding: 20px; max-width: 600px; margin: 0 auto; }
+
+        .header-text { text-align: center; margin-bottom: 30px; }
+        .header-text h1 { color: var(--primary); font-size: 1.6rem; margin-bottom: 10px; }
+        .header-text p { font-size: 1rem; color: #666; }
+
+        /* Estilo dos Cards do Fluxo */
+        .workflow { display: flex; flex-direction: column; gap: 15px; }
+
+        .step-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 6px solid var(--primary);
+            display: flex;
+            flex-direction: column; /* Padrão Mobile */
+            gap: 10px;
+            transition: transform 0.2s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .step-header { display: flex; align-items: center; gap: 12px; }
+
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .step-title { font-weight: 700; color: var(--primary); font-size: 1.1rem; }
+        .step-desc { font-size: 0.95rem; color: #444; line-height: 1.4; }
+
+        /* Botão WhatsApp Fixo no Mobile */
+        .cta-box { margin-top: 30px; text-align: center; }
+        
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: background 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebe57;
+        }
+
+        /* Melhorias para Tablet/Desktop */
+        @media (min-width: 480px) {
+            .step-card { flex-direction: row; align-items: flex-start; }
+            .step-header { flex-direction: column; align-items: center; padding-top: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+<img src="banner-rpa.png" alt="RPA WinThor 2130: Oracle e Python" class="hero-banner">
+
+<div class="container">
+    <div class="header-text">
+        <h1>Solução de Integração Automática (Rotina 2130)</h1>
+        <p>A união do Banco Oracle com RPA Python para um fechamento sem espera.</p>
+    </div>
+
+    <div class="workflow">
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">1</div>
+                <div class="step-title">Validação Oracle</div>
+            </div>
+            <div class="step-desc">Procedure de conferência prévia. Garante que os dados contábeis estejam corretos antes do envio.</div>
+        </div>
+
+        <div class="step-card" style="border-left-color: var(--secondary);">
+            <div class="step-header">
+                <div class="step-number" style="background: var(--secondary);">2</div>
+                <div class="step-title">RPA Programável</div>
+            </div>
+            <div class="step-desc">O robô em Python abre o WinThor de madrugada, acessa a 2130 e executa os períodos definidos.</div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">3</div>
+                <div class="step-title">Contabilização Diária</div>
+            </div>
+            <div class="step-desc">Movimentação diária integrada sem fila e sem necessidade de interação humana.</div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">4</div>
+                <div class="step-title">Integridade Total</div>
+            </div>
+            <div class="step-desc">Eliminação de erros manuais e garantia de que o financeiro bate com o contábil.</div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">5</div>
+                <div class="step-title">Entrega Eficiente</div>
+            </div>
+            <div class="step-desc">Sua equipe foca na análise do Balancete, que já estará pronto no início do dia.</div>
+        </div>
+    </div>
+
+    <div class="cta-box">
+        <a href="https://wa.me/55XXXXXXXXXXX?text=Ola! Gostaria de automatizar a rotina 2130 do WinThor." class="btn-whatsapp">
+            Quero Automatizar Meu Fechamento
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
